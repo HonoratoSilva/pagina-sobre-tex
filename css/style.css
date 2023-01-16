@@ -1,0 +1,645 @@
+#card1 {
+  background-image: url(../img/sobre_imagens/sobre_bar.jpg);
+  background-size: cover;
+}
+
+#card2 {
+  background-image: url(../img/sobre_imagens/sobre_janela_hotel.jpg);
+  background-size: cover;
+}
+
+#card3 {
+  background-image: url(../img/sobre_imagens/sobre_piscina.jpg);
+  background-size: cover;
+}
+
+#card4 {
+  background-image: url(../img/sobre_imagens/sobre_praia.jpg);
+  background-size: cover;
+}
+
+#card5 {
+  background-image: url(../img/sobre_imagens/sobre_piscina02.jpg);
+  background-size: cover;
+}
+
+#card6 {
+  background-image: url(../img/sobre_imagens/sobre_praia02.jpg);
+  background-size: cover;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111415;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 1;
+  color: #7DCE82;
+  text-transform: uppercase;
+}
+a:hover {
+  opacity: 0.9;
+}
+
+p {
+  color: #eee;
+}
+
+/* HEADER */
+.container {
+  display: flex;
+  width: 100%;
+}
+.container .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  font-weight: 600;
+  background-color: #111415;
+  width: 100%;
+  color: #7DCE82;
+  top: 0;
+  left: 0;
+}
+.container .navbar img {
+  width: 10%;
+  padding-left: 15px;
+}
+.container .navbar .nav_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30%;
+  color: #7DCE82;
+}
+.container .navbar .nav_links a {
+  position: relative;
+}
+.container .navbar .nav_links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #7DCE82;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+.container .navbar .nav_links a:hover::after {
+  width: 100%;
+}
+.container .navbar .nav_login {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 13%;
+  padding-right: 15px;
+}
+.container .navbar .nav_login li:last-child a {
+  padding: 10px;
+  background-color: #7DCE82;
+  color: #111415;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+/* HEADER PRINCIPAL */
+.sobre_nos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-image: linear-gradient(rgba(255, 130, 96, 0.2588235294), rgba(232, 226, 136, 0.2352941176)), url(../img/bg.jpg);
+  background-size: cover;
+  background-position: top;
+  min-height: 75vh;
+  color: #fff;
+  background-color: #111415;
+}
+.sobre_nos h1 {
+  font-family: "Dancing Script", cursive;
+  font-weight: 300;
+  font-size: 5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+}
+.sobre_nos p {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* QUEM SOMOS*/
+.sobre_hotel {
+  width: 100%;
+}
+.sobre_hotel h2 {
+  padding: 30px 0;
+  font-family: "Lora", serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #7DCE82;
+  display: flex;
+  justify-content: center;
+}
+
+.metricas_container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-weight: 400;
+  padding: 2% 5%;
+  color: #eee;
+}
+.metricas_number {
+  font-size: 2.5rem;
+  color: #7DCE82;
+}
+.metricas_size {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.metricas_text {
+  font-size: 1rem;
+  width: 280px;
+  line-height: normal;
+}
+
+.sobre_nos_descricao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  background-image: linear-gradient(rgba(255, 130, 96, 0.2588235294), rgba(232, 226, 136, 0.2352941176));
+}
+.sobre_nos_descricao .descricao_hotel {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding-right: 1.5rem;
+  color: #eee;
+}
+.sobre_nos_descricao .descricao_hotel p:first-child {
+  padding-bottom: 1.5rem;
+}
+.sobre_nos_descricao .descricao_praia {
+  width: 35%;
+}
+
+/* COMODIDADES */
+.comodidades {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.comodidades h2 {
+  padding: 30px 0;
+  font-family: "Lora", serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #7DCE82;
+}
+.comodidades .comodidades_flex {
+  display: flex;
+  margin: 5rem 2rem;
+}
+.comodidades .comodidades_flex .comodidades_col_1 {
+  padding-right: 1.5rem;
+}
+.comodidades .comodidades_flex .comodidades_col_1 .comodidades_ajuste {
+  display: flex;
+  padding: 3rem;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #7DCE82;
+}
+.comodidades .comodidades_flex .comodidades_col_1 .comodidades_ajuste h4 {
+  font-weight: 400;
+}
+.comodidades .comodidades_flex .comodidades_col_1 .comodidades_ajuste p {
+  font-size: 1rem;
+}
+.comodidades .comodidades_flex .comodidades_col_2 .comodidades_ajuste {
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  font-size: 1.5rem;
+  color: #7DCE82;
+}
+.comodidades .comodidades_flex .comodidades_col_2 .comodidades_ajuste h4 {
+  font-weight: 400;
+}
+.comodidades .comodidades_flex .comodidades_col_2 .comodidades_ajuste p {
+  font-size: 1rem;
+}
+.comodidades i {
+  font-size: 2.5rem;
+  padding-right: 1.5rem;
+}
+
+/* PAGINA DE RESERVA E DUVIDAS */
+.reserva_duvidas h2 {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  font-family: "Lora", serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #7DCE82;
+}
+.reserva_duvidas p {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.reserva_flex {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-image: linear-gradient(rgba(255, 130, 96, 0.2588235294), rgba(232, 226, 136, 0.2352941176));
+}
+
+.reserva_card {
+  width: 15%;
+  margin: 1rem 0.1rem;
+  padding: 0 1rem;
+  height: 300px;
+  z-index: -1;
+}
+
+.duvidas_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.duvidas_form .input_flex {
+  margin: 1rem;
+}
+.duvidas_form input {
+  width: 20rem;
+  background-color: #111415;
+  border-radius: 4px;
+  border-color: #7DCE82;
+  padding: 6px 16px;
+}
+.duvidas_form textarea {
+  width: 40.5rem;
+  height: 8rem;
+  background-color: #111415;
+  border-radius: 4px;
+  border-color: #7DCE82;
+  padding: 6px 16px;
+  margin-bottom: 10px;
+}
+.duvidas_form button {
+  font-weight: 600;
+  width: 8rem;
+  height: 3rem;
+  background-color: #7DCE82;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.duvidas_form button:hover {
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+/* FOOTER */
+.footer_flex {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0;
+  background-color: #1e2223;
+}
+
+.contato {
+  display: flex;
+  flex-direction: column;
+}
+.contato p:first-child {
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+.contato div {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  padding: 1rem 0 0.5rem 0;
+}
+.contato i {
+  font-size: 1.5rem;
+  color: #fff;
+  padding-right: 1rem;
+}
+
+.redes_sociais {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+.redes_sociais p:first-child {
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+.redes_sociais div {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  padding: 1rem 0 0.5rem 0;
+}
+.redes_sociais i {
+  font-size: 1.5rem;
+  color: #fff;
+  padding-right: 1rem;
+}
+
+/* MOBILE */
+#card1 {
+  background-image: url(../img/sobre_imagens/sobre_bar.jpg);
+  background-size: cover;
+}
+
+#card2 {
+  background-image: url(../img/sobre_imagens/sobre_janela_hotel.jpg);
+  background-size: cover;
+}
+
+#card3 {
+  background-image: url(../img/sobre_imagens/sobre_piscina.jpg);
+  background-size: cover;
+}
+
+#card4 {
+  background-image: url(../img/sobre_imagens/sobre_praia.jpg);
+  background-size: cover;
+}
+
+#card5 {
+  background-image: url(../img/sobre_imagens/sobre_piscina02.jpg);
+  background-size: cover;
+}
+
+#card6 {
+  background-image: url(../img/sobre_imagens/sobre_praia02.jpg);
+  background-size: cover;
+}
+
+@media (max-width: 1620px) {
+  .container .navbar img {
+    width: 12%;
+    padding-left: 15px;
+  }
+  .container .navbar .nav_links {
+    width: 40%;
+  }
+}
+@media (max-width: 1290px) {
+  .container .navbar .nav_links {
+    width: 50%;
+  }
+}
+@media (max-width: 1180px) {
+  .container .navbar .nav_links {
+    width: 50%;
+  }
+}
+@media (max-width: 1210px) {
+  .metricas {
+    padding: 0% 2%;
+  }
+  .metricas_number {
+    font-size: 1.5rem;
+  }
+  .metricas_size {
+    font-size: 1rem;
+  }
+  .metricas_text {
+    font-size: 0.8rem;
+    width: 200px;
+    line-height: normal;
+  }
+  .reserva_card {
+    width: 15%;
+    margin: 1rem 0.1rem;
+    padding: 0 1rem;
+    height: 200px;
+    z-index: -1;
+  }
+}
+@media (max-width: 1080px) {
+  .sobre_nos_descricao {
+    padding: 2rem 0;
+  }
+  .sobre_nos_descricao .descricao_hotel {
+    width: 40%;
+  }
+  .comodidades .comodidades_flex .comodidades_col_1 {
+    padding-right: 1rem;
+  }
+  .comodidades .comodidades_flex .comodidades_col_1 .comodidades_ajuste {
+    padding: 2rem;
+    font-size: 1rem;
+  }
+  .comodidades .comodidades_flex .comodidades_col_2 .comodidades_ajuste {
+    padding: 2rem;
+    font-size: 1rem;
+  }
+  .comodidades .comodidades_flex i {
+    font-size: 2rem;
+    padding-right: 1rem;
+  }
+  .comodidades i {
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (max-width: 1020px) {
+  .container .navbar img {
+    width: 15%;
+    padding-left: 15px;
+  }
+  .container .navbar .nav_links {
+    width: 55%;
+  }
+}
+@media (max-width: 1020px) {
+  .container .navbar .nav_links {
+    width: 60%;
+  }
+}
+@media (max-width: 870px) {
+  .container .navbar img {
+    display: none;
+  }
+  .container .navbar .nav_links {
+    width: 80%;
+  }
+}
+@media (max-width: 840px) {
+  .metricas_container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .metricas_container div:last-child {
+    margin-top: 10px;
+  }
+  .duvidas_form .input_flex {
+    margin: 0.5rem;
+  }
+}
+@media (max-width: 810px) {
+  h2 {
+    font-size: 2rem !important;
+  }
+  .container .navbar .nav_links {
+    flex-direction: column;
+  }
+  .container .navbar .nav_login {
+    width: 15%;
+    padding-right: 15px;
+  }
+  .container .navbar .nav_login li:last-child a {
+    padding: 10px;
+    background-color: #7DCE82;
+    color: #111415;
+    border-radius: 10px;
+    font-size: 0.9rem;
+  }
+  .metricas_container {
+    flex-direction: column;
+    align-content: center;
+  }
+  .duvidas_form {
+    margin: none;
+  }
+  .duvidas_form .input_flex {
+    width: 80%;
+    margin: 0;
+  }
+  .duvidas_form div {
+    width: 90%;
+  }
+  .duvidas_form div textarea {
+    width: 100%;
+  }
+}
+@media (max-width: 540px) {
+  .container .navbar {
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer_flex {
+    flex-direction: column;
+  }
+}
+@media (max-width: 414px) {
+  .sobre_nos h1 {
+    font-weight: 300;
+    font-size: 3rem;
+  }
+  .container .navbar {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container .navbar img {
+    display: none;
+  }
+  .container .navbar .nav_links {
+    width: 100%;
+  }
+  .container .navbar .nav_login {
+    width: auto;
+    padding-top: 15px;
+  }
+  .sobre_nos_descricao {
+    flex-direction: column;
+  }
+  .sobre_nos_descricao .descricao_hotel {
+    width: 100%;
+  }
+  .comodidades_flex {
+    flex-direction: column;
+  }
+  .duvidas_form {
+    width: 100%;
+    align-items: normal;
+  }
+  .footer_flex {
+    flex-direction: column;
+  }
+}
+@media (max-width: 393px) {
+  .duvidas_form {
+    width: 90%;
+    align-items: normal;
+  }
+  .duvidas_form .input_flex input {
+    width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .duvidas_form {
+    width: 90%;
+    align-items: normal;
+  }
+  .duvidas_form .input_flex input {
+    width: 100%;
+  }
+}
+@media (max-width: 280px) {
+  h2 {
+    font-size: 1rem !important;
+  }
+  .contato div {
+    flex-direction: column;
+    font-size: 0.7rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,35 @@
+@use 'variaveis' as v;
+
+@mixin display_row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin display_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin h2 {
+    padding: 30px 0;
+    font-family: v.$fonteH2;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: v.$corPrimaria;
+}
+
+$imgs: (
+    "sobre_bar.jpg", "sobre_janela_hotel.jpg", "sobre_piscina.jpg", "sobre_praia.jpg", "sobre_piscina02.jpg", "sobre_praia02.jpg"
+);
+
+$n:0;
+
+@each $url in $imgs {
+    $n:$n+1;
+    #card#{$n} {
+        background-image: url(../img/sobre_imagens/#{$url});
+        background-size: cover;
+    }
+}
